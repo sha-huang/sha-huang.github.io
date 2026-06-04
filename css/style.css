@@ -76,6 +76,11 @@ section:hover {
     box-shadow: 0 0 30px lightseagreen;
 }
 
+#grad-color {
+    color: white;
+    transition: background-image 0.1s linear;
+}
+
 h1, h2, h3 {
     width: 100%;
     padding: 2rem 0rem;
