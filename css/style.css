@@ -19,6 +19,7 @@ body {
     background-color: #FAFAFA;
 }
 
+/* Styles for the navigation bar */
 nav {
     background-color: lightblue;
 }
@@ -54,6 +55,7 @@ nav a:hover {
     transition: 0.5s;
 }
 
+/* Styles for the body; section is the main partition items */
 section {
     display: flex;
     flex-wrap: wrap;
@@ -63,6 +65,7 @@ section {
     border-radius: 0.6rem;
 }
 
+/* Alternating background colors for visual segregation of each section */
 section:nth-of-type(2n) {
     background-color: paleturquoise;
 }
@@ -97,6 +100,7 @@ article svg {
     margin: 10px 8px 10px 8px;
 }
 
+/* Adjust margin on hover to show icon moving up effects */
 article svg:hover {
     margin: 5px 8px 15px 8px;
     transition: 0.3s;
@@ -121,6 +125,7 @@ article .button:hover {
     transition: 0.5s;
 }
 
+/* Styles for the footer */
 footer {
     display: flex;
     background-color: #a7ffeb;
@@ -142,6 +147,8 @@ footer div a:hover {
     transition: 0.3s;
 }
 
+/* Styles for narrower screen (currently set to <= 1100px), including mainstream handphone and tablet (both portrait and landscape orientations
+For articles under sections, flex-direction become column to show vertical stack up of articles */
 @media (max-width: 1100px) {
     section:nth-of-type(n), footer {
         flex-direction: column;
