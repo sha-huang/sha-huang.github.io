@@ -110,6 +110,40 @@ article img {
     border-radius: 2rem;
 }
 
+article table {
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 0rem 0rem 1.2rem 0rem;
+    font-size: 2.0rem;
+    font-style: italic;
+    caption-side: top;
+    letter-spacing: 0.1rem;
+}
+
+thead {
+    padding: 0.2rem 0.8rem;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+tr:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 0.2rem 0.2rem rgb(225, 229, 6);
+}
+
+th, td {
+    padding: 0.2rem 1.2rem;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+th:nth-child(2), td:nth-child(2), th:nth-child(5), td:nth-child(5) {
+    text-align: right;
+}
+
 .button {
     display: inline-block;
     padding: 10px 30px;
@@ -165,6 +199,11 @@ For articles under sections, flex-direction become column to show vertical stack
     article {
         margin: 1rem 0rem;
         padding: 1rem 0.5rem;
+    }
+
+    th, td {
+        padding: 0.3rem 0.2rem;
+        font-size: 1.0rem;
     }
 
     footer div {
