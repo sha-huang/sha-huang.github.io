@@ -92,8 +92,14 @@ h1, h2, h3 {
 
 article {
     flex: 1;
+    display: flex;
+    flex-wrap: wrap;
     margin: 1rem;
     padding: 2rem;
+}
+
+article p {
+    width: 100%;
 }
 
 article svg {
@@ -111,6 +117,7 @@ article img {
 }
 
 article table {
+    width: 100%;
     table-layout: auto;
     border-collapse: collapse;
 }
@@ -145,18 +152,38 @@ th:nth-child(2), td:nth-child(2), th:nth-child(5), td:nth-child(5) {
 }
 
 .button {
-    display: inline-block;
-    padding: 10px 30px;
-    border-radius: 10px;
+    width: 16rem;
+    height: 4rem;
+    margin: 1.5rem 0 0 0;
+    padding: 1rem;
+    border-radius: 1rem;
     color: white;
     background-color: #007bff;
     text-align: center;
     text-decoration: none;
 }
 
-article .button:hover {
+.button:hover {
     background-color: purple;
     transition: 0.5s;
+}
+
+.tile {
+    width: 18.2rem;
+    height: 13rem;
+    margin: 0.3rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #00c8ff;
+    text-decoration: none;
+}
+
+.tile:hover {
+    background-color: green;
+    /* box-shadow: 0 0 0.2rem 0.2rem green; */
+    transition: 0.7s;
 }
 
 /* Styles for the footer */
@@ -197,6 +224,7 @@ For articles under sections, flex-direction become column to show vertical stack
     }
 
     article {
+        width: 100%;
         margin: 1rem 0rem;
         padding: 1rem 0.5rem;
     }
