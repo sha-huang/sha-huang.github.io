@@ -2,6 +2,8 @@
 
 :wave: This repository contains the files for my personal website deployed at [sha-huang.github.io](https://sha-huang.github.io)
 
+Simple static website with HTML / CSS / JavaScript. No additional libraries required.
+
 ### Responsive design
 
 Overall this website is organized into multiple-column layout and switch to single column on narrow screens.
@@ -39,4 +41,9 @@ Flex-direction is set to column on narrow screen, so the display of articles cha
 
 ### Effects
 
-Add micro interactive features such as icon moving up on mouse hover.
+<details>
+  <summary>Micro interactive features</summary>
+  <ul>
+    <li>Icon moving up on mouse hover</li>
+  </ul>
+</details>
