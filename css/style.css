@@ -19,6 +19,14 @@ body {
     background-color: #FAFAFA;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: solid gold 2px;
+}
+
 /* Styles for the navigation bar */
 nav {
     background-color: lightblue;
@@ -39,7 +47,7 @@ nav li {
 
 nav li a {
     display: block;
-    padding: 1rem 0rem;
+    padding: 0.8rem 0rem;
     color: white;
     text-decoration: none;
 }
@@ -211,16 +219,20 @@ footer div a:hover {
 /* Styles for narrower screen (currently set to <= 1100px), including mainstream handphone and tablet (both portrait and landscape orientations
 For articles under sections, flex-direction become column to show vertical stack up of articles */
 @media (max-width: 1100px) {
-    section:nth-of-type(n), footer {
-        flex-direction: column;
-    }
-
     body {
         font-size: 1.5em;
     }
 
+    nav li a {
+        padding: 0.6rem 0rem;
+    }
+
     section {
         padding: 2rem 1rem;
+    }
+
+    section:nth-of-type(n), footer {
+        flex-direction: column;
     }
 
     article {
