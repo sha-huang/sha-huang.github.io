@@ -1,3 +1,4 @@
+// Background color gradient animation
 function initBkgdAnimation() {
     // Cache the element selector once outside the animation loop
     const targetSection = document.getElementById('grad-color');
@@ -25,8 +26,8 @@ function initBkgdAnimation() {
 }
 
 
+// Header background color gradient fading effect
 function initHeaderFading() {
-    // Header background color gradient fading effect
     const header = document.querySelector("header");
     if (!header) return;
 
@@ -41,5 +42,48 @@ function initHeaderFading() {
 }
 
 
+// Typewriter animation
+function initTypewriter() {
+    const e1 = document.getElementById("typing");
+    if (!e1) return;
+
+    const words = ["Hello!", "Good day!"];
+    let wordIdx = 0;
+    let charIdx = 0;
+    let deleting = false;
+
+    function animate() {
+        const word = words[wordIdx];
+
+        if (!deleting) {
+            // Type one character
+            charIdx++;
+            e1.innerHTML = word.slice(0, charIdx) + "<br>I am Sha &#x1F44B;";
+
+            if (charIdx === word.length) {
+                deleting = true;
+                setTimeout(animate, 1000);
+                return;
+            }
+        } else {
+            // Delete one character
+            charIdx--;
+            e1.innerHTML = word.slice(0, charIdx) + "<br>I am Sha &#x1F44B;";
+
+            if (charIdx === 0) {
+                deleting = false;
+                wordIdx = (wordIdx + 1) % words.length;
+            }
+        }
+
+        setTimeout(animate, deleting ? 100 : 150);
+    }
+
+    // Start the loop
+    animate();
+}
+
+
 initBkgdAnimation();
 initHeaderFading();
+initTypewriter();
