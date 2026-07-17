@@ -214,12 +214,20 @@ footer div {
 }
 
 footer div a {
-    padding: 0.5rem 3rem 0.5rem 0rem;
+    padding: 0.5rem 2rem;
+    transform-origin: center;
 }
 
 footer div a:hover {
-    padding: 0.2rem 3rem 0.8rem 0rem;
-    transition: 0.3s;
+    animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
 }
 
 /* Styles for narrower screen (currently set to <= 1100px), including mainstream handphone and tablet (both portrait and landscape orientations
@@ -254,5 +262,9 @@ For articles under sections, flex-direction become column to show vertical stack
 
     footer div {
         padding: 1rem 2.5rem;
+    }
+
+    footer div a {
+        padding: 0.5rem 3rem 0.5rem 0rem;
     }
 }
