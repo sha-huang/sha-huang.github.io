@@ -44,6 +44,7 @@ Flex-direction is set to column on narrow screen, so the display of articles cha
 <details>
   <summary>Micro interactive features</summary>
   <ul>
-    <li>Icon moving up on mouse hover</li>
+    <li>Icon moving up on mouse hover: tech items on tech stack page</li>
+    <li>Icon wiggling on mouse hover: contact items on the footer of each page</li>
   </ul>
 </details>
