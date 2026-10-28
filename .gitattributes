@@ -1,1 +1,8 @@
-* text=auto
+# Set all text files to use LF line endings
+* text=auto eol=lf
+
+# Ensure binary files are not touched
+*.png binary
+*.jpg binary
+*.pickle binary
+*.pstat binary
