@@ -25,6 +25,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 100;
     border-bottom: solid gold 2px;
     background: rgba(32, 178, 170, 1.0);
     transition: background-color 0.3s ease;
@@ -136,6 +137,11 @@ article table {
     border-collapse: collapse;
 }
 
+article div {
+    /* flex: 1 1 250px; */
+    width: 100%;
+}
+
 caption {
     padding: 0rem 0rem 1.2rem 0rem;
     font-size: 2.0rem;
@@ -180,6 +186,95 @@ th:nth-child(2), td:nth-child(2), th:nth-child(5), td:nth-child(5) {
 .button:hover {
     background-color: purple;
     transition: 0.5s;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* Circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows (pointing right) to the left container */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows (pointing left) to the right container */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
 }
 
 .tile {
@@ -258,6 +353,36 @@ For articles under sections, flex-direction become column to show vertical stack
     th, td {
         padding: 0.3rem 0.2rem;
         font-size: 1.0rem;
+    }
+
+    /* Place timeline to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make all arrows pointing left */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Align all the circles */
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like left ones */
+    .right {
+        left: 0%;
     }
 
     footer div {
